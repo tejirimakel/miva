@@ -1,0 +1,222 @@
+/*
+Theme Name: Miva Clone
+Theme URI: localhost/miva
+Author: Tejiri Makele
+Author URI: https://tmdr.netlify.app
+Description: A basic theme Clone
+Version: 1.0
+*/
+
+
+/* Global CSS Variables */
+:root {
+    --blue: #0A3150;
+    --font-family: 'Cinzel', sans-serif;
+    --font-size: 16px;
+    --text: #fff;
+}
+
+main{
+    background-color:;
+}
+
+.card-text{
+    font-size: 10px;
+    color: #BB9E7F;
+    text-transform: uppercase;
+}
+
+.card-title{
+    color: var(--blue);
+font-family: 'Manrope', sans-serif;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 28px; /* 140% */
+letter-spacing: -0.4px;
+}
+
+.btnnew{
+    border-radius: 0 !important;
+    padding: 19px 24px;
+}
+
+
+.ttext{
+color: #514F6E;
+
+/* Text md/Medium */
+font-family: 'Manrope', sans-serif;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 28px; /* 175% */
+}
+
+.navtext{
+    color: var(--blue);
+text-align: center;
+font-family: 'Manrope', sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 20px; /* 142.857% */
+}
+
+.active {
+  border-bottom: 2px solid red !important;
+}
+
+.bod{
+    border-left: 1px solid rgba(206, 214, 220, 0.20);
+    border-right: 1px solid rgba(206, 214, 220, 0.20);
+    height: 100%;
+}
+
+.navbg{
+    background-color: var(--blue);
+}
+.tnav a {
+	color: var(--text);
+}
+
+.htext{
+font-family: var(--font-family);
+color: var(--blue);
+font-size: 48px;
+font-style: bold;
+font-weight: 700;
+line-height: 56px; /* 116.667% */
+letter-spacing: -0.96px;
+}
+
+.hw{
+	background: var(--blue);
+}
+
+.blk1{
+	border-left: 2px solid #BB9E7F;
+      height: auto;
+      position:relative;
+      padding: 5px 20px;
+     color:white;
+}
+
+.text-info{
+	justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.footer-info{
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.bxs-box{
+    border: 1.08px solid #DDE2E7;
+background: rgba(255, 255, 255, 0.10);
+backdrop-filter: blur(10.802957534790039px);
+height: 362.818px;
+padding: 34.569px;
+}
+
+.bxs{
+padding: 5px 5px;
+}
+
+.text-s{
+        text-align: left;
+    padding-left: 20px;
+    line-height: 5px;
+    padding-top: 15px;
+}
+
+.ovr{
+    width: 432px;
+height:;
+flex-shrink: 0;
+    background: #072339;
+filter: blur(100px);
+}
+
+
+.popcardbox{
+        margin: -30px 0px 0px 60px;
+    position: relative;
+}
+
+.text-s2{
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.popcard{
+    display: flex;
+width: 375px;
+height: 65px;
+padding: 18.643px 24px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+border-radius: 9.321px;
+border: 1.165px solid #DDE2E7;
+background: #FFF;
+box-shadow: 0px 10px 24px 0px #072339;
+
+}
+
+.fs6{
+    margin: 0px 5px 12px 20px;
+    font-size: 9pt;
+}
+
+.fs5{
+    margin: 12px 5px 0px 20px;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.icon1 {
+            position: relative;
+            width: 34px;
+            height: 33px;
+        }
+.ellipse {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+.tick {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;        
+        }
+
+
+.animate__slideInUp{
+
+    --animate-duration: 4.5s;
+    --animate-delay: 1s;
+    
+}        
+
+.animate__fadeIn{
+    --animate-duration: 10s;
+    --animate-delay: 5s;
+}
