@@ -64,7 +64,7 @@
         </li>
 
         </ul>        
-                <form class="d-flex">
+                <form class="d-flex d-sm-none">
     <button class="btn btn-outline-danger me-2" style="font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;" type="button">Request Information</button>
     <button class="btn btn-danger me-2" style="font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;" type="button">Apply Now</button>
   </form>
