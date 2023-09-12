@@ -9,7 +9,7 @@
 </head>
 <body <?php body_class(); ?>>
     <header>
-        <nav class="navbar navbar-expand-lg navbg" style="height: 46px; font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;">
+        <nav class="navbar navbar-expand-lg navbg d-sm-none" style="height: 46px; font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;">
             <div class="container justify-content-end">
                 <div class="tnav">
              <ul class="navbar-nav me-auto mb-lg-0">
@@ -69,6 +69,13 @@
     <button class="btn btn-danger me-2" style="font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;" type="button">Apply Now</button>
   </form>
 </div>
+            </nav>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary d-lg-none d-sm-flex d-md-flex">
+                <div class="container">
+                <form class="d-flex">
+    <button class="btn btn-lg btn-outline-danger me-2" style="font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;" type="button">Request Information</button>
+    <button class="btn btn-danger me-2" style="font-weight: 600; font-size:12px; font-family:'Manrope', sans-serif;" type="button">Apply Now</button>
+  </form></div>
             </nav>
            </header>
     <div id="content" class="site-content">
