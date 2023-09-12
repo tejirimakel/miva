@@ -60,7 +60,7 @@
           <a class="nav-link" href="#">Contact Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><img style="padding:0 5px" src="<?php echo get_template_directory_uri(); ?>/assets/logos_whatsapp-icon.svg">+234 0800023445</a>
+          <a class="nav-link" href="#"><img style="padding:0 5px" src="<?php echo get_template_directory_uri(); ?>/assets/logos_whatsapp-icon.svg">+234 9132300000</a>
         </li>
 
         </ul>        
