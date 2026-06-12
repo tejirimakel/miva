@@ -3,31 +3,124 @@ Theme Name: Miva Clone
 Theme URI: localhost/miva
 Author: Tejiri Makele
 Author URI: https://tmdr.netlify.app
-Description: A basic theme Clone
+Description: A basic theme clone for Miva Open University (scholarships landing page).
 Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: miva
 */
 
-
-/* Global CSS Variables */
+/* ==========================================================================
+   Design tokens
+   ========================================================================== */
 :root {
     --blue: #0A3150;
+    --gold: #BB9E7F;
     --font-family: 'Cinzel', sans-serif;
+    --font-body: 'Manrope', sans-serif;
     --font-size: 16px;
     --text: #fff;
 }
 
-main{
-    background-color:;
+body {
+    font-family: var(--font-body);
 }
 
+/* ==========================================================================
+   Header / navigation
+   ========================================================================== */
+.utility-nav {
+    height: 46px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.navbg {
+    background-color: var(--blue);
+}
+
+.tnav a {
+    color: var(--text);
+}
+
+.bod {
+    border-left: 1px solid rgba(206, 214, 220, 0.20);
+    border-right: 1px solid rgba(206, 214, 220, 0.20);
+    height: 100%;
+}
+
+.brand {
+    padding-right: 62px;
+}
+
+.navtext {
+    color: var(--blue);
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.active {
+    border-bottom: 2px solid red;
+}
+
+.btn-cta {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.portal-icon {
+    padding: 0 8px;
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.htext {
+    font-family: var(--font-family);
+    color: var(--blue);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -0.96px;
+}
+
+.hero-lead {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.btnnew {
+    border-radius: 0;
+    padding: 19px 24px;
+}
+
+/* ==========================================================================
+   "How it Works" section
+   ========================================================================== */
 .container.hw {
     position: relative;
+}
+
+.hw {
+    background: var(--blue);
 }
 
 .svg-container {
     position: relative;
     width: 100%;
-    margin-left:31.61rem;  
+    margin-left: 31.61rem;
+}
+
+.deco-svg--gold {
+    margin-left: 1.5rem;
+    margin-bottom: -14rem;
+}
+
+.deco-svg--red {
+    margin-top: -2.2rem;
 }
 
 .text-overlay {
@@ -42,90 +135,16 @@ main{
     flex-direction: column;
 }
 
-.card-text{
-    font-size: 10px;
-    color: #BB9E7F;
-    text-transform: uppercase;
+.blk1 {
+    border-left: 2px solid var(--gold);
+    height: auto;
+    position: relative;
+    padding: 5px 20px;
+    color: white;
 }
 
-.card-title{
-    color: var(--blue);
-font-family: 'Manrope', sans-serif;
-font-size: 20px;
-font-style: normal;
-font-weight: 700;
-line-height: 28px; /* 140% */
-letter-spacing: -0.4px;
-}
-
-.btnnew{
-    border-radius: 0 !important;
-    padding: 19px 24px;
-}
-
-
-.ttext{
-color: #514F6E;
-
-/* Text md/Medium */
-font-family: 'Manrope', sans-serif;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 28px; /* 175% */
-}
-
-.navtext{
-    color: var(--blue);
-text-align: center;
-font-family: 'Manrope', sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: 20px; /* 142.857% */
-}
-
-.active {
-  border-bottom: 2px solid red !important;
-}
-
-.bod{
-    border-left: 1px solid rgba(206, 214, 220, 0.20);
-    border-right: 1px solid rgba(206, 214, 220, 0.20);
-    height: 100%;
-}
-
-.navbg{
-    background-color: var(--blue);
-}
-.tnav a {
-	color: var(--text);
-}
-
-.htext{
-font-family: var(--font-family);
-color: var(--blue);
-font-size: 48px;
-font-style: bold;
-font-weight: 700;
-line-height: 56px; /* 116.667% */
-letter-spacing: -0.96px;
-}
-
-.hw{
-	background: var(--blue);
-}
-
-.blk1{
-	border-left: 2px solid #BB9E7F;
-      height: auto;
-      position:relative;
-      padding: 5px 20px;
-     color:white;
-}
-
-.text-info{
-	justify-content: space-between;
+.text-info {
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
     padding-left: 0;
@@ -133,140 +152,246 @@ letter-spacing: -0.96px;
     list-style: none;
 }
 
-.footer-info{
+.bxs-box {
+    border: 1.08px solid #DDE2E7;
+    background: rgba(255, 255, 255, 0.10);
+    -webkit-backdrop-filter: blur(10.8px);
+    backdrop-filter: blur(10.8px);
+    height: 362.818px;
+    padding: 34.569px;
+}
+
+.bxs {
+    padding: 5px;
+}
+
+.funder-meta {
+    line-height: 8px;
+}
+
+.preview-title {
+    font-size: 25px;
+}
+
+.preview-amount {
+    font-size: 24px;
+}
+
+.preview-deadline {
+    font-size: 14px;
+}
+
+.ovr {
+    width: 432px;
+    height: 100px;
+    flex-shrink: 0;
+    background: #072339;
+    filter: blur(100px);
+}
+
+.popcardbox {
+    margin: -30px 0 0 20px;
+    position: relative;
+}
+
+.popcard {
+    display: flex;
+    width: 375px;
+    height: 65px;
+    padding: 18.643px 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 9.321px;
+    border: 1.165px solid #DDE2E7;
+    background: #FFF;
+    box-shadow: 0 10px 24px 0 #072339;
+}
+
+.fs6 {
+    margin: 0 5px 12px 20px;
+    font-size: 9pt;
+}
+
+.fs5 {
+    margin: 12px 5px 0 20px;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.icon1 {
+    position: relative;
+    width: 34px;
+    height: 33px;
+}
+
+.ellipse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+/* ==========================================================================
+   Scholarship cards
+   ========================================================================== */
+.section-heading {
+    padding-top: 112px;
+    color: var(--blue);
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.scholarship-card__img {
+    height: 265px;
+    object-fit: cover;
+}
+
+.scholarship-card__logo {
+    margin-top: -3rem;
+}
+
+.card-text {
+    font-size: 10px;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.card-title {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.scholarship-card__meta {
+    gap: 10px;
+}
+
+.meta-icon {
+    width: auto;
+}
+
+/* ==========================================================================
+   Testimonials
+   ========================================================================== */
+.testimonials {
+    padding-top: 112px;
+    padding-bottom: 112px;
+}
+
+.eyebrow {
+    color: red;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.section-subheading {
+    color: var(--blue);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.64px;
+}
+
+.ttext {
+    color: #514F6E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.testimonial-avatar {
+    width: auto;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.footer-about {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.footer-contact {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-links {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-links a,
+.footer-contact a {
+    opacity: 0.7;
+}
+
+.footer-rule {
+    color: #fff;
+    opacity: 0.2;
+}
+
+.footer-info {
     justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     padding-left: 0;
     margin-bottom: 0;
     list-style: none;
+    font-size: 12px;
+    font-weight: 500;
 }
 
-.bxs-box{
-    border: 1.08px solid #DDE2E7;
-background: rgba(255, 255, 255, 0.10);
-backdrop-filter: blur(10.802957534790039px);
-height: 362.818px;
-padding: 34.569px;
+.social-icon {
+    width: 19.556px;
+    height: 15.889px;
 }
 
-.bxs{
-padding: 5px 5px;
-}
-
-.text-s{
-        text-align: left;
-    padding-left: 20px;
-    line-height: 5px;
-    padding-top: 15px;
-}
-
-.ovr{
-    width: 432px;
-height:;
-flex-shrink: 0;
-    background: #072339;
-filter: blur(100px);
-}
-
-
-.popcardbox{
-        margin: -30px 0px 0px 20px;
-    position: relative;
-}
-
-.text-s2{
-    display: flex;
-    align-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-
-.popcard{
-    display: flex;
-width: 375px;
-height: 65px;
-padding: 18.643px 24px;
-justify-content: space-between;
-align-items: center;
-flex-shrink: 0;
-border-radius: 9.321px;
-border: 1.165px solid #DDE2E7;
-background: #FFF;
-box-shadow: 0px 10px 24px 0px #072339;
-
-}
-
-.fs6{
-    margin: 0px 5px 12px 20px;
-    font-size: 9pt;
-}
-
-.fs5{
-    margin: 12px 5px 0px 20px;
-    font-size: 12pt;
-    font-weight: 600;
-}
-
-.icon1 {
-            position: relative;
-            width: 34px;
-            height: 33px;
-        }
-.ellipse {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-.tick {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 50%;        
-        }
-
-
-.animate__slideInUp{
-
+/* ==========================================================================
+   Animation timing (animate.css custom properties)
+   ========================================================================== */
+.animate__slideInUp {
     --animate-duration: 2s;
     --animate-delay: 2s;
-    
-}   
+}
 
-.animate__fadeIn{
+.animate__fadeIn {
     --animate-duration: 10s;
     --animate-delay: 5s;
-}     
+}
 
-.animate__slideInRight{
+.animate__slideInRight {
     --animate-duration: 5s;
 }
 
-
-.animate__fadeInUp{
- --animate-duration: 5s;   
+.animate__fadeInUp {
+    --animate-duration: 5s;
 }
 
-.animate__fadeInRight{
+.animate__fadeInRight {
     --animate-duration: 5s;
     --animate-delay: 2s;
 }
 
-.animate__fadeInDown{
+.animate__fadeInDown {
     --animate-duration: 3s;
-}
-
-.animate__fadeInDown .card2{
- --animate-duration: s;
- --animate-delay: 2s;
-}
-
-.animate__fadeInDown .card3{
- --animate-duration: 5s;
- --animate-delay: 4s;
 }
