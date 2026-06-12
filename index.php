@@ -2,8 +2,6 @@
 /**
  * Main fallback template.
  *
- * The scholarships landing page lives in front-page.php; this template handles
- * the blog/archive/fallback case in the WordPress template hierarchy.
  *
  * @package Miva
  */

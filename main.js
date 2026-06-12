@@ -1,12 +1,4 @@
-/**
- * Scroll-reveal animations.
- *
- * Every element carrying a `data-animate="<animate.css class>"` attribute is
- * watched by a single IntersectionObserver. When it scrolls into view the
- * animation class is applied once, then the element is unobserved — no
- * per-frame work, no flicker. Users who prefer reduced motion are revealed
- * immediately without animation.
- */
+
 (function () {
 	'use strict';
 

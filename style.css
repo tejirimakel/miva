@@ -2,16 +2,14 @@
 Theme Name: Miva Clone
 Theme URI: localhost/miva
 Author: Tejiri Makele
-Author URI: https://tmdr.netlify.app
+Author URI: https://tmd-inc.vercel.app
 Description: A basic theme clone for Miva Open University (scholarships landing page).
 Version: 1.0
 License: GNU General Public License v2 or later
 Text Domain: miva
 */
 
-/* ==========================================================================
-   Design tokens
-   ========================================================================== */
+
 :root {
     --blue: #0A3150;
     --gold: #BB9E7F;
@@ -25,9 +23,7 @@ body {
     font-family: var(--font-body);
 }
 
-/* ==========================================================================
-   Header / navigation
-   ========================================================================== */
+
 .utility-nav {
     height: 46px;
     font-weight: 600;
@@ -73,9 +69,7 @@ body {
     padding: 0 8px;
 }
 
-/* ==========================================================================
-   Hero
-   ========================================================================== */
+
 .htext {
     font-family: var(--font-family);
     color: var(--blue);
@@ -97,9 +91,7 @@ body {
     padding: 19px 24px;
 }
 
-/* ==========================================================================
-   "How it Works" section
-   ========================================================================== */
+
 .container.hw {
     position: relative;
 }
@@ -241,9 +233,7 @@ body {
     border-radius: 50%;
 }
 
-/* ==========================================================================
-   Scholarship cards
-   ========================================================================== */
+
 .section-heading {
     padding-top: 112px;
     color: var(--blue);
@@ -283,9 +273,7 @@ body {
     width: auto;
 }
 
-/* ==========================================================================
-   Testimonials
-   ========================================================================== */
+
 .testimonials {
     padding-top: 112px;
     padding-bottom: 112px;
@@ -316,9 +304,7 @@ body {
     width: auto;
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+
 .footer-about {
     font-size: 12px;
     font-weight: 500;
@@ -366,9 +352,7 @@ body {
     height: 15.889px;
 }
 
-/* ==========================================================================
-   Animation timing (animate.css custom properties)
-   ========================================================================== */
+
 .animate__slideInUp {
     --animate-duration: 2s;
     --animate-delay: 2s;

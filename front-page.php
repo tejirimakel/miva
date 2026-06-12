@@ -2,10 +2,6 @@
 /**
  * Front page template: the Miva scholarships landing page.
  *
- * Scholarship and testimonial sections are driven by their custom post types.
- * When no entries exist yet, a small static sample is shown so the page is
- * never empty.
- *
  * @package Miva
  */
 
