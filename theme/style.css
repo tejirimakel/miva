@@ -1,0 +1,603 @@
+/*
+Theme Name: Miva Clone
+Theme URI: localhost/miva
+Author: Tejiri Makele
+Author URI: https://tmd-inc.vercel.app
+Description: A basic theme clone for Miva Open University (scholarships landing page).
+Version: 1.1.0
+Requires at least: 6.3
+Tested up to: 7.1
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+Text Domain: miva
+*/
+
+
+:root {
+    --blue: #0A3150;
+    --gold: #BB9E7F;
+    --font-family: 'Cinzel', serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-size: 16px;
+    --text: #fff;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 1100;
+    padding: 8px 16px;
+    background: #fff;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.navbg a:focus-visible,
+.hw a:focus-visible {
+    outline-color: #fff;
+}
+
+
+.utility-nav {
+    height: 46px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.navbg {
+    background-color: var(--blue);
+}
+
+.tnav a {
+    color: var(--text);
+}
+
+.bod {
+    border-left: 1px solid rgba(206, 214, 220, 0.20);
+    border-right: 1px solid rgba(206, 214, 220, 0.20);
+    height: 100%;
+}
+
+.brand {
+    padding-right: 62px;
+}
+
+.navtext {
+    color: var(--blue);
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.navtext .nav-link.active {
+    border-bottom: 2px solid red;
+}
+
+.btn-cta {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.portal-icon {
+    padding: 0 8px;
+}
+
+
+.htext {
+    font-family: var(--font-family);
+    color: var(--blue);
+    font-size: clamp(2rem, 1.2rem + 3vw, 3rem);
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: -0.96px;
+}
+
+.hero-lead {
+    color: var(--blue);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.btnnew {
+    border-radius: 0;
+    padding: 19px 24px;
+}
+
+
+.container.hw {
+    position: relative;
+    overflow: clip;
+}
+
+.hw {
+    background: var(--blue);
+}
+
+.svg-container {
+    position: absolute;
+    top: 0;
+    left: 31.61rem;
+}
+
+.deco-svg {
+    display: block;
+}
+
+.deco-svg--gold {
+    margin-left: 1.5rem;
+    margin-bottom: -14rem;
+}
+
+.deco-svg--red {
+    margin-top: -2.2rem;
+}
+
+.text-overlay {
+    position: relative;
+    min-height: 624px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blk1 {
+    border-left: 2px solid var(--gold);
+    height: auto;
+    position: relative;
+    padding: 5px 20px;
+    color: white;
+}
+
+.text-info {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.bxs-box {
+    border: 1.08px solid #DDE2E7;
+    background: rgba(255, 255, 255, 0.10);
+    -webkit-backdrop-filter: blur(10.8px);
+    backdrop-filter: blur(10.8px);
+    min-height: 362.818px;
+    padding: 34.569px;
+}
+
+.bxs {
+    padding: 5px;
+}
+
+.funder-meta {
+    line-height: 8px;
+}
+
+.preview-title {
+    font-size: 25px;
+}
+
+.preview-amount {
+    font-size: 24px;
+}
+
+.preview-deadline {
+    font-size: 14px;
+}
+
+.ovr {
+    width: 432px;
+    max-width: 100%;
+    height: 100px;
+    flex-shrink: 0;
+    background: #072339;
+    filter: blur(100px);
+}
+
+.popcardbox {
+    margin: -30px 0 0 20px;
+    position: relative;
+}
+
+.popcard {
+    display: flex;
+    width: 375px;
+    max-width: 100%;
+    min-height: 65px;
+    padding: 18.643px 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 9.321px;
+    border: 1.165px solid #DDE2E7;
+    background: #FFF;
+    box-shadow: 0 10px 24px 0 #072339;
+}
+
+.fs6 {
+    margin: 0 5px 12px 20px;
+    font-size: 9pt;
+}
+
+.fs5 {
+    margin: 12px 5px 0 20px;
+    font-size: 12pt;
+    font-weight: 600;
+}
+
+.icon1 {
+    position: relative;
+    width: 34px;
+    height: 33px;
+}
+
+.ellipse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tick {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+
+.section-heading {
+    padding-top: clamp(3.5rem, 10vw, 7rem);
+    color: var(--blue);
+    font-size: clamp(1.75rem, 1rem + 2.5vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.scholarship-card__img {
+    height: 265px;
+    object-fit: cover;
+}
+
+.scholarship-card__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+}
+
+.scholarship-card__placeholder img {
+    max-width: 50%;
+}
+
+.scholarship-card__logo {
+    margin-top: -3rem;
+}
+
+.card-text {
+    font-size: 10px;
+    color: var(--gold);
+    text-transform: uppercase;
+}
+
+.card-title {
+    color: var(--blue);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.4px;
+}
+
+.scholarship-card__meta {
+    gap: 10px;
+}
+
+.meta-icon {
+    width: auto;
+}
+
+
+.testimonials {
+    padding-top: clamp(3.5rem, 10vw, 7rem);
+    padding-bottom: clamp(3.5rem, 10vw, 7rem);
+}
+
+.eyebrow {
+    color: red;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 3px;
+}
+
+.section-subheading {
+    color: var(--blue);
+    font-size: clamp(1.5rem, 1rem + 1.6vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.64px;
+}
+
+.ttext {
+    color: #514F6E;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+.testimonial-avatar {
+    width: auto;
+}
+
+
+.footer-about {
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.footer-contact {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer-heading {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-links {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-links a {
+    opacity: 0.7;
+}
+
+.footer-rule {
+    color: #fff;
+    opacity: 0.2;
+}
+
+.footer-info {
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 4px 16px;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.social-icon {
+    width: 19.556px;
+    height: 15.889px;
+}
+
+
+.animate__slideInUp {
+    --animate-duration: 2s;
+    --animate-delay: 2s;
+}
+
+.animate__fadeIn {
+    --animate-duration: 10s;
+    --animate-delay: 5s;
+}
+
+.animate__slideInRight {
+    --animate-duration: 5s;
+}
+
+.animate__fadeInUp {
+    --animate-duration: 5s;
+}
+
+.animate__fadeInRight {
+    --animate-duration: 5s;
+    --animate-delay: 2s;
+}
+
+.animate__fadeInDown {
+    --animate-duration: 3s;
+}
+
+
+.front-page-content {
+    padding-bottom: clamp(3.5rem, 10vw, 7rem);
+}
+
+/* Program directory (archive-program.php, single-program.php). */
+.program-archive__header {
+    max-width: 44rem;
+    margin-bottom: 2.5rem;
+}
+
+.program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.program-card__img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.program-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 12px;
+    padding: 0;
+    list-style: none;
+}
+
+.program-card__tags li {
+    padding: 2px 10px;
+    border-radius: 999px;
+    background: #EEF2F5;
+    color: var(--blue);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.program-card .card-title a,
+.scholarship-card .card-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.program-card:hover .card-title a,
+.scholarship-card:hover .card-title a {
+    text-decoration: underline;
+}
+
+.program-card:focus-within,
+.scholarship-card:focus-within {
+    outline: 3px solid var(--blue);
+    outline-offset: 2px;
+}
+
+.program-card .card-title a:focus-visible,
+.scholarship-card .card-title a:focus-visible {
+    outline: none;
+}
+
+.program-card__summary {
+    color: #514F6E;
+}
+
+.program-card__meta {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.program-empty {
+    padding: 3rem 1.5rem;
+    border: 1px dashed #DDE2E7;
+    text-align: center;
+}
+
+.program-single__back a {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.program-single__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.program-single__img {
+    margin-bottom: 1.5rem;
+}
+
+.program-single__aside {
+    align-self: start;
+    padding: 1.5rem;
+    border: 1px solid #DDE2E7;
+    color: var(--blue);
+}
+
+.program-details {
+    margin: 1rem 0 1.5rem;
+}
+
+.program-details > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #DDE2E7;
+}
+
+.program-details dt {
+    font-weight: 500;
+}
+
+.program-single__funder {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 1rem 0 0;
+    font-weight: 700;
+}
+
+.program-single__funder img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.program-details dd {
+    margin: 0;
+    font-weight: 700;
+    text-align: right;
+}
+
+@media (min-width: 992px) {
+    .program-single__layout {
+        grid-template-columns: minmax(0, 1fr) 20rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .svg-container {
+        display: none;
+    }
+
+    .text-overlay {
+        min-height: 0;
+        align-items: stretch;
+    }
+
+    .brand {
+        padding-right: 0;
+    }
+
+    .footer-info {
+        justify-content: flex-start;
+    }
+
+    footer .widget {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .popcardbox {
+        margin-left: 0;
+    }
+
+    .text-info {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
