@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "college-programs/program-card",
+	"version": "1.0.0",
+	"title": "Program Card",
+	"category": "widgets",
+	"icon": "welcome-learn-more",
+	"description": "Show a summary card for one published program, with its credential, delivery mode and apply link.",
+	"keywords": [ "program", "course", "college" ],
+	"textdomain": "college-programs",
+	"attributes": {
+		"programId": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}

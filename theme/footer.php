@@ -5,6 +5,10 @@
  * @package Miva
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 $miva_assets = get_template_directory_uri() . '/assets';
 
 $miva_footer_cols = array(
@@ -48,14 +52,14 @@ $miva_socials = array(
                     <?php esc_html_e( 'Miva Open University is a premier online university designed to empower individuals with the skills they need to thrive in today\'s world.', 'miva' ); ?>
                 </p>
                 <ul class="navbar-nav footer-contact">
-                    <li class="pb-1"><img class="portal-icon" src="<?php echo esc_url( "$miva_assets/logos_whatsapp-icon.svg" ); ?>" alt="" aria-hidden="true">+234 9132300000</li>
-                    <li class="pb-1"><img class="portal-icon" src="<?php echo esc_url( "$miva_assets/p.svg" ); ?>" alt="" aria-hidden="true">01 3300 666</li>
-                    <li><img class="portal-icon" src="<?php echo esc_url( "$miva_assets/m.svg" ); ?>" alt="" aria-hidden="true">help@miva.university</li>
+                    <li class="pb-1"><img class="portal-icon" src="<?php echo esc_url( "$miva_assets/logos_whatsapp-icon.svg" ); ?>" alt="" aria-hidden="true"><a class="text-reset text-decoration-none" href="tel:+2349132300000">+234 9132300000</a></li>
+                    <li class="pb-1"><img class="portal-icon" src="<?php echo esc_url( "$miva_assets/p.svg" ); ?>" alt="" aria-hidden="true"><a class="text-reset text-decoration-none" href="tel:+23413300666">01 3300 666</a></li>
+                    <li><img class="portal-icon" src="<?php echo esc_url( "$miva_assets/m.svg" ); ?>" alt="" aria-hidden="true"><a class="text-reset text-decoration-none" href="mailto:help@miva.university">help@miva.university</a></li>
                 </ul>
             </div>
             <?php foreach ( $miva_footer_cols as $heading => $links ) : ?>
                 <div class="col-lg-3 col-md-6 col-sm-12 widget">
-                    <h5 class="footer-heading"><?php echo esc_html( $heading ); ?></h5>
+                    <h2 class="footer-heading"><?php echo esc_html( $heading ); ?></h2>
                     <ul class="navbar-nav footer-links">
                         <?php foreach ( $links as $link ) : ?>
                             <li><a class="nav-link" href="#"><?php echo esc_html( $link ); ?></a></li>
@@ -71,7 +75,7 @@ $miva_socials = array(
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <p class="footer-about">
                     <?php
-                    /* translators: %s: current year. */
+
                     printf( esc_html__( '© %s Miva Open University. All rights reserved.', 'miva' ), esc_html( wp_date( 'Y' ) ) );
                     ?>
                 </p>

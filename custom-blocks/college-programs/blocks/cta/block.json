@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "college-programs/cta",
+	"version": "1.0.0",
+	"title": "Call to Action",
+	"category": "widgets",
+	"icon": "megaphone",
+	"description": "A banner with a heading, a short message and one button. The button links to the program directory unless you give it another address.",
+	"keywords": [ "cta", "banner", "button", "apply" ],
+	"textdomain": "college-programs",
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": ""
+		},
+		"text": {
+			"type": "string",
+			"default": ""
+		},
+		"buttonText": {
+			"type": "string",
+			"default": ""
+		},
+		"buttonUrl": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"example": {
+		"attributes": {
+			"heading": "Ready to take the next step?",
+			"text": "Browse our programs and find the one that fits your goals.",
+			"buttonText": "Browse programs"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style.css",
+	"render": "file:./render.php"
+}
