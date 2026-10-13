@@ -33,15 +33,16 @@ add_action( 'after_setup_theme', 'miva_setup' );
 /**
  * Front-end styles and scripts.
  *
- * Bootstrap and animate.css are pinned and loaded with Subresource Integrity.
- * No jQuery dependency: Bootstrap 5 and main.js are vanilla.
+ * Bootstrap and animate.css are pinned and loaded.
  */
 function miva_enqueue_assets() {
-	// Third-party CSS (CDN, version-pinned).
+	
+	wp_enqueue_style( 'miva-fonts', 'https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Manrope:wght@400;500;600;700;800&display=swap', array(), null ); // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+
 	wp_enqueue_style( 'bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css', array(), '5.3.1' );
 	wp_enqueue_style( 'animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1' );
 
-	// Theme stylesheet (depends on the above so it can override).
+	// Theme stylesheet 
 	wp_enqueue_style( 'miva-style', get_stylesheet_uri(), array( 'bootstrap-css' ), MIVA_VERSION );
 
 	// Third-party JS (CDN, version-pinned, in footer).
@@ -53,7 +54,6 @@ function miva_enqueue_assets() {
 add_action( 'wp_enqueue_scripts', 'miva_enqueue_assets' );
 
 /**
- * Add Subresource Integrity attributes to the CDN assets.
  */
 function miva_sri_attributes( $handle, $integrity ) {
 	return sprintf( ' integrity="%s" crossorigin="anonymous"', esc_attr( $integrity ) );
@@ -88,6 +88,23 @@ add_filter(
 	2
 );
 
-// Data-driven content: custom post types and their meta boxes.
+/**
+ *
+ * @param array  $urls          Resource hint URLs.
+ * @param string $relation_type Hint type.
+ * @return array
+ */
+function miva_resource_hints( $urls, $relation_type ) {
+	if ( 'preconnect' === $relation_type && wp_style_is( 'miva-fonts', 'queue' ) ) {
+		$urls[] = array(
+			'href' => 'https://fonts.gstatic.com',
+			'crossorigin',
+		);
+	}
+	return $urls;
+}
+add_filter( 'wp_resource_hints', 'miva_resource_hints', 10, 2 );
+
+
 require get_template_directory() . '/inc/post-types.php';
 require get_template_directory() . '/inc/meta-boxes.php';

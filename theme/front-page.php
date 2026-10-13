@@ -10,7 +10,7 @@ get_header();
 $miva_assets = get_template_directory_uri() . '/assets';
 ?>
 
-<main>
+<main id="main">
     <?php
     get_template_part( 'template-parts/hero' );
     get_template_part( 'template-parts/how-it-works' );
@@ -44,7 +44,7 @@ $miva_assets = get_template_directory_uri() . '/assets';
                             <div class="card-body">
                                 <img class="img-fluid scholarship-card__logo" src="<?php echo esc_url( "$miva_assets/mv$i.svg" ); ?>" alt="">
                                 <p class="card-text"><?php esc_html_e( 'Miva Open University', 'miva' ); ?></p>
-                                <h5 class="card-title"><?php esc_html_e( 'Miva Open University Scholarship for Outstanding Students', 'miva' ); ?></h5>
+                                <h3 class="card-title"><?php esc_html_e( 'Miva Open University Scholarship for Outstanding Students', 'miva' ); ?></h3>
                                 <div class="d-flex align-items-center scholarship-card__meta">
                                     <img class="img-fluid meta-icon" src="<?php echo esc_url( "$miva_assets/uil_money-stack.svg" ); ?>" alt="" aria-hidden="true">
                                     <span>₦500,000</span>
@@ -58,13 +58,13 @@ $miva_assets = get_template_directory_uri() . '/assets';
             ?>
         </div>
         <div class="text-center py-5">
-            <button class="btn btnnew btn-danger" type="button"><?php esc_html_e( 'View all Scholarships', 'miva' ); ?></button>
+            <a class="btn btnnew btn-danger" href="<?php echo esc_url( get_post_type_archive_link( 'scholarship' ) ); ?>"><?php esc_html_e( 'View all Scholarships', 'miva' ); ?></a>
         </div>
     </section>
 
     <section class="container testimonials">
-        <h6 class="eyebrow"><?php esc_html_e( 'TESTIMONIALS', 'miva' ); ?></h6>
-        <h5 class="section-subheading"><?php esc_html_e( 'Hear what others have to say', 'miva' ); ?></h5>
+        <p class="eyebrow mb-2"><?php esc_html_e( 'TESTIMONIALS', 'miva' ); ?></p>
+        <h2 class="section-subheading"><?php esc_html_e( 'Hear what others have to say', 'miva' ); ?></h2>
         <div class="row mx-auto my-5">
             <?php
             $miva_testimonials = new WP_Query(
@@ -104,6 +104,25 @@ $miva_assets = get_template_directory_uri() . '/assets';
             ?>
         </div>
     </section>
+
+    <?php
+    // When a static page is set as the front page, show what the editor put
+    // in it (for example a Call to Action block) below the fixed sections.
+    if ( is_page() ) :
+        while ( have_posts() ) :
+            the_post();
+            if ( '' !== trim( get_the_content() ) ) :
+                ?>
+                <section class="container front-page-content">
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                    </div>
+                </section>
+                <?php
+            endif;
+        endwhile;
+    endif;
+    ?>
 </main>
 
 <?php get_footer(); ?>

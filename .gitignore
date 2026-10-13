@@ -1,0 +1,21 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependencies and build output (none are required today)
+node_modules/
+vendor/
+
+# Never commit local environments, data or secrets
+.env
+.env.*
+*.sql
+*.sql.gz
+*.log
+wp-config.php
+
+/tm-doc
+/playground
+/dist

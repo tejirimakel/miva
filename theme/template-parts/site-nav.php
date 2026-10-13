@@ -59,6 +59,13 @@ $miva_portals = array(
                             <li><a class="dropdown-item" href="#"><?php esc_html_e( 'School of Management and Social Sciences', 'miva' ); ?></a></li>
                         </ul>
                     </li>
+                    <?php // The `program` post type is registered by the College Programs plugin. ?>
+                    <?php if ( post_type_exists( 'program' ) ) : ?>
+                        <?php $miva_on_programs = is_post_type_archive( 'program' ) || is_singular( 'program' ); ?>
+                        <li class="nav-item">
+                            <a class="nav-link<?php echo $miva_on_programs ? ' active' : ''; ?>" href="<?php echo esc_url( get_post_type_archive_link( 'program' ) ); ?>"<?php echo is_post_type_archive( 'program' ) ? ' aria-current="page"' : ''; ?>><?php esc_html_e( 'Programs', 'miva' ); ?></a>
+                        </li>
+                    <?php endif; ?>
                     <li class="nav-item"><a class="nav-link" href="#"><?php esc_html_e( 'Admission', 'miva' ); ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><?php esc_html_e( 'Tuition', 'miva' ); ?></a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><?php esc_html_e( 'Contact Us', 'miva' ); ?></a></li>

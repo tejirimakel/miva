@@ -1,0 +1,8 @@
+/* Program Card block: editor only. */
+.college-program-card__notice {
+	margin: 0;
+	padding: 12px 16px;
+	border-left: 4px solid #dba617;
+	background: #fcf9e8;
+	font-size: 13px;
+}

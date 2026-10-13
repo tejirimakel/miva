@@ -38,19 +38,19 @@ $miva_steps = array(
         </svg>
     </div>
     <div class="text-overlay">
-        <div class="row p-5">
+        <div class="row p-3 p-lg-5">
             <div class="col-lg-6 col-sm-12">
                 <h2 class="pb-4 text-white"><?php esc_html_e( 'How it Works', 'miva' ); ?></h2>
                 <?php foreach ( $miva_steps as $step ) : ?>
                     <div class="pt-3 my-3">
                         <div class="blk1" data-animate="animate__slideInRight">
-                            <h5><?php echo esc_html( $step['title'] ); ?></h5>
+                            <h3 class="h5"><?php echo esc_html( $step['title'] ); ?></h3>
                             <p><?php echo esc_html( $step['body'] ); ?></p>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
-            <div class="col-lg-6 col-sm-12 text-white p-5">
+            <div class="col-lg-6 col-sm-12 text-white p-3 p-lg-5">
                 <div class="ovr"></div>
                 <div class="bxs-box p-3" data-animate="animate__fadeInUp">
                     <div class="bxs">
@@ -63,7 +63,7 @@ $miva_steps = array(
                         </div>
                         <p class="my-5 preview-title"><?php esc_html_e( 'Miva Open University Scholarship for Outstanding Students', 'miva' ); ?></p>
                         <div class="text-info text-white mt-5">
-                            <h6 class="preview-amount">₦500,000</h6>
+                            <p class="preview-amount fw-medium lh-sm mb-2">₦500,000</p>
                             <p class="preview-deadline"><?php esc_html_e( 'Deadline: 2 weeks', 'miva' ); ?></p>
                         </div>
                     </div>
