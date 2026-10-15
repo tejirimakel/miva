@@ -1,4 +1,5 @@
 # Miva
+
 A small WordPress proof of concept. An editor manages college programs in the admin; visitors browse them in a responsive directory. It demonstrates a classic PHP theme, a standalone plugin, a custom post type, Advanced Custom Fields integration and a custom Gutenberg block.
 
 ## Features
@@ -24,9 +25,9 @@ The theme loads three things from public CDNs: Bootstrap 5.3.1 and animate.css 4
 
 ## Installing in a real WordPress site
 
-The theme and the plugin are separate packages in this repository: `theme/` and `custom-blocks/college-programs/`. Each is installed on its own, in either of two ways.
+The theme and the plugin are separate packages in this repository: `theme/` and `custom-blocks/college-programs/`. Each is installed on its own.
 
-### Option A: upload zips in the admin
+### upload zips in the admin
 
 Build the two zips from the repository root:
 
@@ -83,7 +84,7 @@ A banner with a heading, a short message and one button. It is a native block an
 
 Empty parts are left out: no heading tag without a heading, no button without a label.
 
-**On the landing page.** `front-page.php` builds the landing page from fixed sections. To add the banner there, create a page, put the block in it, and choose that page under Settings → Reading → "Your homepage displays: A static page". Whatever the page contains is shown below the testimonials. The Playground blueprint sets this up.
+**On the landing page.** `front-page.php` builds the landing page from fixed sections. To add the banner there, create a page, put the block in it, and choose that page under Settings → Reading → "Your homepage displays: A static page". Whatever the page contains is shown below the testimonials.
 
 ## Architecture
 
@@ -142,7 +143,6 @@ The two halves meet at one function, `college_programs_get_program_data( $post_i
 ### Responsive
 
 - The program grid uses CSS Grid with `auto-fill`, so it needs no breakpoints.
-- The landing page was fixed for small screens: previously `style.css` had no media queries and the "How it Works" section overflowed below 992px.
 
 ## Screenshots
 
@@ -162,8 +162,8 @@ The two halves meet at one function, `college_programs_get_program_data( $post_i
 ## Known limitations and possible improvements
 
 - The block's program picker lists the first 100 published programs alphabetically; a searchable picker would scale better.
-- Most header and footer links are `#` placeholders, and the "Request Information" and "Apply Now" header buttons do nothing. They are inherited from the landing-page clone.
-
+- Most header and footer links are `#` placeholders, and the "Request Information" and "Apply Now" header buttons do nothing.
+- campus and credential could have been taxonomies which will be better for filtering, but i have put them as ACF fields, and nothing in the project filters by them.
 - Bootstrap, animate.css and the fonts come from CDNs; self-hosting them would remove the third-party requests.
 - Campus is free text. If filtering by campus or credential were needed, taxonomies would be the better model.
 - `scholarship` and `testimonial` could move into a plugin for the same reasons `program` lives in one.
