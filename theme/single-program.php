@@ -24,6 +24,11 @@ get_header(); ?>
                     __( 'Duration', 'miva' )      => $miva_program['duration'] ?? '',
                 )
             );
+
+            // Extra ACF fields are label/value pairs; append them after the built-in ones.
+            foreach ( $miva_program['extra'] ?? array() as $miva_field ) {
+                $miva_details[ $miva_field['label'] ] = $miva_field['value'];
+            }
             ?>
             <article <?php post_class( 'program-single' ); ?>>
                 <p class="program-single__back">

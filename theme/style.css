@@ -562,6 +562,15 @@ button:focus-visible,
     text-align: right;
 }
 
+.program-card__fields {
+    margin: 0 0 1rem;
+    font-size: 14px;
+}
+
+.program-card__fields > div {
+    padding: 0.25rem 0;
+}
+
 @media (min-width: 992px) {
     .program-single__layout {
         grid-template-columns: minmax(0, 1fr) 20rem;

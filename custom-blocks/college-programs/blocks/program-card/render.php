@@ -58,6 +58,16 @@ $college_programs_tags  = array_filter( array( $college_programs_data['credentia
 		<?php if ( '' !== $college_programs_text ) : ?>
 			<p class="college-program-card__summary"><?php echo esc_html( $college_programs_text ); ?></p>
 		<?php endif; ?>
+		<?php if ( $college_programs_data['extra'] ) : ?>
+			<dl class="college-program-card__fields">
+				<?php foreach ( $college_programs_data['extra'] as $college_programs_field ) : ?>
+					<div>
+						<dt><?php echo esc_html( $college_programs_field['label'] ); ?></dt>
+						<dd><?php echo esc_html( $college_programs_field['value'] ); ?></dd>
+					</div>
+				<?php endforeach; ?>
+			</dl>
+		<?php endif; ?>
 		<?php if ( $college_programs_data['application_url'] ) : ?>
 			<p class="college-program-card__actions">
 				<a class="college-program-card__apply" href="<?php echo esc_url( $college_programs_data['application_url'] ); ?>">
