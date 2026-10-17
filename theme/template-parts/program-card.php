@@ -39,6 +39,16 @@ $miva_tags    = array_filter(
             <?php if ( has_excerpt() || '' !== get_the_content() ) : ?>
                 <p class="program-card__summary"><?php echo esc_html( wp_strip_all_tags( get_the_excerpt() ) ); ?></p>
             <?php endif; ?>
+            <?php if ( ! empty( $miva_program['extra'] ) ) : ?>
+                <dl class="program-details program-card__fields">
+                    <?php foreach ( $miva_program['extra'] as $miva_field ) : ?>
+                        <div>
+                            <dt><?php echo esc_html( $miva_field['label'] ); ?></dt>
+                            <dd><?php echo esc_html( $miva_field['value'] ); ?></dd>
+                        </div>
+                    <?php endforeach; ?>
+                </dl>
+            <?php endif; ?>
             <?php if ( ! empty( $miva_program['campus'] ) || ! empty( $miva_program['duration'] ) ) : ?>
                 <p class="program-card__meta mt-auto mb-0">
                     <?php echo esc_html( implode( ' · ', array_filter( array( $miva_program['campus'] ?? '', $miva_program['duration'] ?? '' ) ) ) ); ?>
